@@ -411,7 +411,6 @@ const Login = ({ login, register, user }) => {
   const [secureTextEntryRe, setSecureTextEntryRe] = React.useState(true);
   const [loading, setLoading] = React.useState(false);
   const { getActiveUser } = React.useContext(UserContext);
-
   // useEffect(() => {
   //   if (user && user.status === 200 && signup && user.isLogin) {
   //     toggleSignUp(!signup);

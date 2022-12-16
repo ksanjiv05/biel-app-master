@@ -25,10 +25,10 @@ import NetInfo from "@react-native-community/netinfo";
 import { LogBox } from "react-native";
 import { saveToken } from "./api/notification/notificationAction";
 import * as SecureStore from "expo-secure-store";
-import * as Sentry from 'sentry-expo';
-import Constants from 'expo-constants';
+import * as Sentry from "sentry-expo";
+import Constants from "expo-constants";
 
-// LogBox.ignoreAllLogs(true);
+LogBox.ignoreAllLogs(true);
 
 export const UserContext = React.createContext();
 
@@ -43,9 +43,10 @@ Notifications.setNotificationHandler({
 ///
 Sentry.init({
   dsn: "https://9efe3d42735f4491a311ab38701ae224@o4504337745707008.ingest.sentry.io/4504338024628224",
-  // tracesSampleRate: 1.0,
+  tracesSampleRate: 0.1,
+  // enableNative: true,
   enableInExpoDevelopment: true,
-  debug: false, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+  debug: true // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
 });
 // Sentry.Native.setContext(Constants.manifest.revisionId);
 
@@ -61,16 +62,15 @@ function App() {
 
   const [expoPushToken, setExpoPushToken] = React.useState("");
   React.useEffect(() => {
-  try {
-  const x = Math.co("yyy")
-    
-  } catch (error) {
-    console.log("err",error)
-    Sentry.Native.captureException(error);
-    throw new Error(error);
-  }
+    // try {
+    //   const x = Math.co("yyy");
+    // } catch (error) {
+    //   Sentry.Native.captureException(error);
+    //   Sentry.Native.captureException("test error")
+    //   throw new Error(error);
+    // }
     setLoader(true);
-    
+
     async function checkAuth() {
       // const token = await getValueFromStore("token");
       // setIsAuth(isAuthanticate(token));
@@ -206,7 +206,7 @@ function App() {
     </Provider>
   );
 }
-export default App;
+export default Sentry.Native.wrap(App);
 
 // export default connect(null, { saveToken })(App);
 //TODO:

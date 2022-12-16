@@ -1,5 +1,18 @@
 {
   "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
     "base": {
       "node": "14.17.0",
       "yarn": "1.22.5",
