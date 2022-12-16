@@ -1,0 +1,71 @@
+{
+  "build": {
+    "base": {
+      "node": "14.17.0",
+      "yarn": "1.22.5",
+      "env": {
+        "EXAMPLE_ENV": "example value"
+      },
+      "android": {
+        "image": "default",
+        "env": {
+          "PLATFORM": "android"
+        }
+      },
+      "ios": {
+        "image": "latest",
+        "env": {
+          "PLATFORM": "ios"
+        }
+      }
+    },
+    "release": {
+      "extends": "base",
+      "env": {
+        "ENVIRONMENT": "production"
+      }
+    },
+    "staging": {
+      "extends": "base",
+      "env": {
+        "ENVIRONMENT": "staging"
+      },
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "extends": "base",
+      "developmentClient": false,
+      "env": {
+        "ENVIRONMENT": "production"
+      },
+      "ios": {
+        "simulator": false
+      }
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": true,
+      "env": {
+        "ENVIRONMENT": "development"
+      },
+      "android": {
+        "distribution": "internal",
+        "withoutCredentials": true
+      },
+      "ios": {
+        "simulator": true
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId":"bielfoodstore@gmail.com",
+        "companyName":"BHARAT INDUSTRIAL ENTERPRISES LIMITED"
+      }
+    }
+  }
+}

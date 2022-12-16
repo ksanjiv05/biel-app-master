@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "biel",
+    "slug": "biel-export-management",
+    "version": "1.1.5",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.innobuzz.logistics",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "versionCode": 6,
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.innobuzz.logistics"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "sentry-expo",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/profile.png",
+          "color": "#bd0a3b",
+          "sounds": [
+            "./assets/audio.wav"
+          ],
+          "mode": "production"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c7086e47-d4fa-4b0d-a653-78f4a4bbaf35"
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "innobuzz",
+            "project": "react-native",
+            "authToken": "d832fc59bb58488cac4c1e94833070b324d79baa2cff45e7940865efc25f78ce"
+          }
+        }
+      ]
+    }
+  }
+}

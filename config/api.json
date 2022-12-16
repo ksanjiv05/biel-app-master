@@ -1,0 +1,46 @@
+{
+  "url":"http://192.168.1.2:3000",
+  "url_prod":"https://api.bielfood.com",
+  "routes": {
+    "login": "/api/v0.0.1/user/login",
+    "changePassword": "/api/v0.0.1/user/changePassword",
+    "editUserDetails": "/api/v0.0.1/user/editUserDetails",
+    "register": "/api/v0.0.1/user/register",
+    "getUsers": "/api/v0.0.1/user/getUsers",
+    "resetPassword": "/api/v0.0.1/user/resetPassword",
+    "getCurrentUser": "/api/v0.0.1/user/getCurrentUser",
+    "addShipment": "/api/v0.0.1/shipment/addShipment",
+    "getShipments": "/api/v0.0.1/shipment/getShipments",
+    "getAllShipments": "/api/v0.0.1/shipment/getAllShipments",
+    "getShipmentDetails": "/api/v0.0.1/shipment/getShipmentDetails",
+    "packagingMaterialStatus": "/api/v0.0.1/shipment/packagingMaterialStatus",
+    "schedule": "/api/v0.0.1/shipment/schedule",
+    "productionSchedule": "/api/v0.0.1/shipment/productionSchedule",
+    "documentStatus": "/api/v0.0.1/shipment/documentStatus",
+    "shipmentSchedule": "/api/v0.0.1/shipment/shipmentSchedule",
+    "documentDispatchStatus": "/api/v0.0.1/shipment/documentDispatchStatus",
+
+    "deliverySchedule": "/api/v0.0.1/shipment/deliverySchedule",
+    "finalPayment": "/api/v0.0.1/shipment/finalPayment",
+    "fileUpload": "/api/v0.0.1/file/fileUpload",
+    "addArticle": "/api/v0.0.1/news/addArticle",
+    "getArtiles": "/api/v0.0.1/news/getArtiles",
+    "addProduct": "/api/v0.0.1/products/addProduct",
+    "getProducts": "/api/v0.0.1/products/getProduct",
+    "editProduct": "/api/v0.0.1/products/editProduct/",
+    "addPackagingCost": "/api/v0.0.1/packaging/addPackagingCost",
+    "updatePackagingCost": "/api/v0.0.1/packaging/updatePackagingCost/",
+    "getAllPackagingCost": "/api/v0.0.1/packaging/getAllPackagingCost",
+    "deletePackagingCost": "/api/v0.0.1/packaging/updatePackagingCost/"
+  },
+  "requestConfig": {
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  "requestConfigMultipart": {
+    "headers": {
+      "Content-Type": "multipart/form-data"
+    }
+  }
+}

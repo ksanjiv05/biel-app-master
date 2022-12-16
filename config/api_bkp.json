@@ -1,0 +1,5 @@
+{
+  "host": "http://192.168.168.236:4000",
+  "baseUrl": "/api/v0.0.1/client",
+  "adminBaseUrl": "/api/v0.0.1/admin"
+}

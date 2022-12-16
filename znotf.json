@@ -1,0 +1,55 @@
+ {
+  "date": 1632904421406,       
+  "request": Object {
+    "content": Object {        
+      "autoDismiss": true,     
+      "badge": null,
+      "body": "dsghjkljl;,kmj",
+      "data": Object {},       
+      "sound": "default",      
+      "sticky": false,
+      "subtitle": null,
+      "title": "hiefdvsahijk",
+    },
+    "identifier": "0:1632904421410967%0ac519e6f9fd7ecd",
+    "trigger": Object {
+      "channelId": null,
+      "remoteMessage": Object {
+        "collapseKey": null,
+        "data": Object {
+          "body": "{}",
+          "experienceId": "@sanjiv05/biel-export-management",
+          "message": "dsghjkljl;,kmj",
+          "projectId": "c7086e47-d4fa-4b0d-a653-78f4a4bbaf35",
+          "scopeKey": "@sanjiv05/biel-export-management",
+          "title": "hiefdvsahijk",
+        },
+        "from": "367315174693",
+        "messageId": "0:1632904421410967%0ac519e6f9fd7ecd",
+        "messageType": null,
+        "notification": null,
+        "originalPriority": 2,
+        "priority": 2,
+        "sentTime": 1632904421406,
+        "to": null,
+        "ttl": 2419200,
+      },
+      "type": "push",
+    },
+  },
+}
+
+
+,
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "innobuzz",
+            "project": "react-native",
+            "authToken": "d832fc59bb58488cac4c1e94833070b324d79baa2cff45e7940865efc25f78ce"
+          }
+        }
+      ]
+    }
