@@ -62,13 +62,7 @@ function App() {
 
   const [expoPushToken, setExpoPushToken] = React.useState("");
   React.useEffect(() => {
-    // try {
-    //   const x = Math.co("yyy");
-    // } catch (error) {
-    //   Sentry.Native.captureException(error);
-    //   Sentry.Native.captureException("test error")
-    //   throw new Error(error);
-    // }
+   
     setLoader(true);
 
     async function checkAuth() {
